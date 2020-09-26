@@ -4,6 +4,7 @@ from inspect import signature, _empty
 
 
 def typeCheck(f):
+    """"""
     # Get the function signature
     sig = signature(f)
     @functools.wraps(f)
@@ -29,9 +30,11 @@ def typeCheck(f):
 
 
 def add1(a,b):
+    """"""
     return float(a + b)
 
 def add2(a: int,b: int = 1):
+    """"""
     return float(a + b)
 
 def add3(a: int,b: int = 1) -> float:
@@ -39,12 +42,15 @@ def add3(a: int,b: int = 1) -> float:
 
 @typeCheck
 def xadd1(a,b):
+    """"""
     return float(a + b)
 
 @typeCheck
 def xadd2(a: int,b: int = 1):
+    """"""
     return float(a + b)
 
 @typeCheck
 def xadd3(a: int,b: int = 1) -> float:
+    """"""
     return float(a + b)
