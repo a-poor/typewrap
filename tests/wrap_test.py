@@ -16,7 +16,7 @@ def add_checkOutputs(a: int, b: int = 1) -> float:
 
 def test_add():
     assert add(1,2.0) == 3.0
-    assert add("a","b") == "ab"
+    assert add("3",".0") == 3.0
 
     assert add_checkInputs(1,2)
     with pytest.raises(TypeError):
