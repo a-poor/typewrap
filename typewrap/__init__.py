@@ -29,5 +29,34 @@ def typeCheck(f):
         return result
     return inner
 
+def checkInputs(f):
+    """Function input type-checking decorator.
+    
+    Wraps a function with argument type annotations.
+    When function is called, checks input arguments 
+    against annotated types.
+
+    Example:
+    >>> @checkInputs
+    >>> def add(a: int, b: int):
+    ...    return a + b
+    >>> add(1, 2)   # Works
+    >>> add(1, 2.0) # Raises TypeError
+    """
+    # Get the function signature
+    sig = inspect.signature(f)
+    @functools.wraps(f)
+    def inner(*args,**kwargs):
+        # Check the inputs
+        bound = sig.bind(*args,**kwargs)
+        for arg, val in bound.arguments.items():
+            argtype = sig.parameters.get(arg).annotation
+            if argtype is inspect._empty: continue
+            if not isinstance(val,argtype):
+                raise TypeError(f"[typeCheck] type({val!r}) !+ {argtype!r}")
+        # Return the result
+        return f(*args,**kwargs)
+    return inner
+
 
 
