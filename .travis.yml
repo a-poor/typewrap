@@ -5,7 +5,7 @@ python:
 - '3.6'
 branches:
   only:
-    - master
+  - master
 install:
 - pip install -e .
 - pip install -r requirements.txt
@@ -13,9 +13,8 @@ script:
 - pytest --cov=./
 deploy:
   provider: pypi
-  username: "__token__"
+  username: __token__
   password:
-    secure: ~
+    secure: k0ldsxLNvymQ+TcKWVUXDldlYFY4IeVSOrtKfn1OwtWv8JkNoJZ32vKQ9qILeJEL3siHGyFcBxzSaMMvMt4A502ODa4p2puoDLvkjlpa69OTsM50Y8Cf/T54+luWvSfxPcAFpKT9xXz9/mgk1xq8d85+AP7QfxuXUzrrehNfSZ9UCVjF1OR+F7Q5CnqV8SFmQZTlJBuZkp7ErnVBY7ZswLS/NuwnNpT0+OEY8JaYEHT8r06ixljxleVMZqJyIF6Bl4DIz3gnBygdixNrRaZ3Q/JxHihCIRxlB+bskWAgaicCR6eY/rAFZ+T4TdYKo7TKxpUn1DslgwSIfuCzGm4+YWyXVmJbrablpaiVqm0Z0YU5eciGgoWVYEMJ0Vh2plM/3NDqCWIHEUVH25oPTFs7n1y1Y+LG09tkkQI8SbOV1IQ+Y88cVn0ZtSM6I4IEixs79DFFDduY3iY1RyUcktbG5Gn4u+7FWdKc6VtCbE4CIiLBs1hcYIsqYBrGCgWd/eN4xFKz1q0JyjXegoFR5kPljZZdTTCyNXsElqhU4k/3xOCMFhWE9xsIH4M39DFo8OFgPDjeUQjOMGXttqKgUB4mKPiUl8PlLTGTGMNhTu0FgJOgts97muxs3nG1MvY39PzPWLb4pMTXmK3yiP3INMPkkY49QB+aFlVL3WylYEQbpI8=
   on:
     tags: true
-
