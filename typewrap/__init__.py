@@ -7,7 +7,12 @@ __version__ = "0.2.0"
 
 
 def typeCheck(f):
-    """Function type-checking decorator."""
+    """Function input type-checking decorator.
+    
+    Wraps a function with argument type annotations.
+    When function is called, checks input and output
+    value types against annotated types.
+    """
     # Get the function signature
     sig = inspect.signature(f)
     @functools.wraps(f)
