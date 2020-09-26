@@ -2,7 +2,7 @@
 import typewrap
 import pytest
 
-def add(a: int, v: int = 1) -> float:
+def add(a: int, b: int = 1) -> float:
     return float(a + b)
 
 @typewrap.typeCheck
