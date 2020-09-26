@@ -1,11 +1,11 @@
 
-import typecheck
+import typewrap
 import pytest
 
 def add(a: int, v: int = 1) -> float:
     return float(a + b)
 
-@typecheck.typeCheck
+@typewrap.typeCheck
 def xadd(a: int, b: int = 1) -> float:
     return float(a + b)
 
