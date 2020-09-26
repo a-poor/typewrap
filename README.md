@@ -22,7 +22,9 @@ $ pip install typewrap
 
 ## Usage
 
-There's only one function in the package, `typeCheck`,  a decorator function that checks the function input and outputs against the function annotations.
+### `typewrap.typeCheck`
+
+A decorator function that checks the function input and outputs against the function annotations.
 
 Example:
 
@@ -55,6 +57,43 @@ add_checkInputs(1,2.0) # Raises TypeError
 # Wrapped function with
 # bad output type
 add_checkOutputs(1,2) # Raises TypeError
+```
+
+### `typewrap.checkInputs`
+
+A decorator function that checks the function inputs against the function annotations.
+
+Example:
+
+```python
+from typewrap import checkInputs
+
+def add_noChecks(a: int, b: int) -> int:
+    """Has annotations but doesn't
+    check argument types."""
+    return a + b
+
+@checkInputs
+def add_inputs(a: int, b: int) -> int:
+    return a + b
+
+@checkInputs
+def add_outputs(a: int, b: int) -> int:
+    return float(a+b)
+
+# Unwrapped function with 
+# uninforced type annotations
+add_noChecks(1,2.0) # No errors
+
+
+# Wrapped function with bad
+# input arguments
+add_inputs(1,2.0) # Raises TypeError
+
+
+# Wrapped function with
+# bad output type
+add_outputs(1,2) # No errors
 ```
 
 
