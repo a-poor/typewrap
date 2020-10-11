@@ -13,11 +13,11 @@ script:
 - pytest --cov=./
 after_success:
 - bash <(curl -s https://codecov.io/bash)
-deploy:
-  provider: pypi
-  username: "__token__"
-  password:
-    secure: M9ZXOuLz6Q0vrZnpMs3TSjzDjcZGf2oyECkhAZjpbocrYpql5iULwx59jfSIItJed10bCDjThmvyHZbNFq0NaQlhtrifPa5snIN+knJ/PEyygGyyx4eY7QJ+G35+7Nyjw+nkiiZ2F19grQ2zp/hTdkowDU5rLBJiVojOQ+Vy6mW1SwfpoUlIPXTasCAul8Kur7Y9GFmp04yzEXuz3ZNzUYDbdL2mfvwr2rFombraGH0O1bg+hEd516umiPS0ydI0mAeStgGktAUnjQIr5Wf3fYzxUgHjc5fmFwiTk9jK4QT0nlAvynAHy9XtxqI7yXNp7TiAPJQZHSdkAXDqTD6FoUpp5t0+SDxvpV11PcFljeoVCQd3YZJ3agZog4CUB4ZdvNGWxbwfAQOoZR8rNGHnfa2nt4Izex2jrGOfmouQa9pCGIdK0h7KSZeSQImh1AfB51759ZbIChoJLzhvaApOnRUYUujM3dkfWNPSIAcYkPBnzf84S1AYBcwuKDbXesOyHkqsLR75sQHCWUECK28OyIS+V668uNOhv6+LS+DxZ3IMSH3cVrNElVKZH6LyFzilyn6wfib0zoMaHNSL4qLGHneBNG6qTEWTDMRdUl3FyXkNrumLcRwGoz0DFVWL0Xpu+IjVCtdhLTRVYkLo4OxQ01N8ZB6zi92pye1LTM6v7xQ=
-  on:
-    tags: true
+# deploy:
+#   provider: pypi
+#   username: "__token__"
+#   password:
+#     secure: M9ZXOuLz6Q0vrZnpMs3TSjzDjcZGf2oyECkhAZjpbocrYpql5iULwx59jfSIItJed10bCDjThmvyHZbNFq0NaQlhtrifPa5snIN+knJ/PEyygGyyx4eY7QJ+G35+7Nyjw+nkiiZ2F19grQ2zp/hTdkowDU5rLBJiVojOQ+Vy6mW1SwfpoUlIPXTasCAul8Kur7Y9GFmp04yzEXuz3ZNzUYDbdL2mfvwr2rFombraGH0O1bg+hEd516umiPS0ydI0mAeStgGktAUnjQIr5Wf3fYzxUgHjc5fmFwiTk9jK4QT0nlAvynAHy9XtxqI7yXNp7TiAPJQZHSdkAXDqTD6FoUpp5t0+SDxvpV11PcFljeoVCQd3YZJ3agZog4CUB4ZdvNGWxbwfAQOoZR8rNGHnfa2nt4Izex2jrGOfmouQa9pCGIdK0h7KSZeSQImh1AfB51759ZbIChoJLzhvaApOnRUYUujM3dkfWNPSIAcYkPBnzf84S1AYBcwuKDbXesOyHkqsLR75sQHCWUECK28OyIS+V668uNOhv6+LS+DxZ3IMSH3cVrNElVKZH6LyFzilyn6wfib0zoMaHNSL4qLGHneBNG6qTEWTDMRdUl3FyXkNrumLcRwGoz0DFVWL0Xpu+IjVCtdhLTRVYkLo4OxQ01N8ZB6zi92pye1LTM6v7xQ=
+#   on:
+#     tags: true
 
