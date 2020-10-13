@@ -7,7 +7,7 @@ setuptools.setup(
     name="typewrap",
     version="0.2.1",
     author="Austin Poor",
-    author_email="author@example.com",
+    author_email="austinpoor@gmail.com",
     description="A super small package for function input type checking",
     long_description=long_description,
     long_description_content_type="text/markdown",
