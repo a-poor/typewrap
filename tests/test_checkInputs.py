@@ -2,29 +2,24 @@
 import typewrap
 import pytest
 
-def add(a: int, b: int = 1) -> float:
+
+@typewrap.checkInputs
+def add_retAnnotsMatch(a: int, b: int = 1) -> float:
+    """Return type matches annotation"""
     return float(a + b)
 
 @typewrap.checkInputs
-def add_checkInputs(a: int, b: int = 1) -> float:
-    return float(a + b)
-
-@typewrap.checkInputs
-def add_checkOutputs(a: int, b: int = 1) -> float:
+def add_retAnnotsDontMatch(a: int, b: int = 1) -> float:
+    """Return type DOESN'T match annotation"""
     return int(a + b)
 
 
-def test_add():
-    assert add(1,2.0) == 3.0
-    assert add("3",".0") == 3.0
-
-    assert add_checkInputs(1,2)
-    with pytest.raises(TypeError):
-        add_checkInputs(1,2.0)
-    
-    assert add_checkOutputs(1,2) == 3.0
-
-
-
-
-
+def test_checkInputs():
+    # Check wrapper with good inputs
+    assert add_retAnnotsMatch(1,2)
+    # Check wrapper with bad inputs
+    with pytest.raises(typewrap.TypeCheckError):
+        add_retAnnotsMatch(1,2.0)
+    # Output inputs don't match but wrapper
+    # shouldn't catch it
+    assert add_retAnnotsDontMatch(1,2) == 3.0

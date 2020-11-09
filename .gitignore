@@ -1,2 +1,4 @@
 __pycache__
-build-and-push.sh
+docs/_build
+venv
+.pytest_cache
