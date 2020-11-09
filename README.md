@@ -6,6 +6,7 @@ _created by Austin Poor_
 [![PyPI](https://img.shields.io/pypi/v/typewrap)](https://pypi.org/project/typewrap/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/typewrap)](https://pypi.org/project/typewrap/)
 [![codecov](https://codecov.io/gh/a-poor/typewrap/branch/master/graph/badge.svg)](https://codecov.io/gh/a-poor/typewrap)
+[![Documentation Status](https://readthedocs.org/projects/typewrap/badge/?version=latest)](https://typewrap.readthedocs.io/en/latest/?badge=latest)
 
 
 Super tiny python package for function typechecking.
