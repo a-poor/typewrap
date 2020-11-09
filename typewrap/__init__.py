@@ -12,7 +12,7 @@ from typing import Callable, Any
 from .exceptions import TypeCheckError
 
 
-__version__ = "0.2.3"
+__version__ = "0.2.4"
 
 
 def checkInputs(f: Callable[[Any],Any]) -> Callable[[Any],Any]:
