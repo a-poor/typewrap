@@ -10,6 +10,8 @@ Welcome to TypeWrap's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+*created by Austin Poor*
+
 .. image:: https://travis-ci.com/a-poor/typewrap.svg?branch=master
    :target: https://travis-ci.com/a-poor/typewrap
 .. image:: https://img.shields.io/pypi/v/typewrap
@@ -21,8 +23,6 @@ Welcome to TypeWrap's documentation!
 .. image:: https://readthedocs.org/projects/typewrap/badge/?version=latest
   :target: https://typewrap.readthedocs.io/en/latest/?badge=latest
   :alt: Documentation Status
-
-*created by Austin Poor*
 
 A super tiny python package for function typechecking.
 
@@ -36,11 +36,11 @@ A super tiny python package for function typechecking.
   * ``python>=3.6``
 
 
- Installation
- -------------
- Installing with ``pip``
- ::
-     $ pip install apoor
+Installation
+-------------
+Installing with ``pip``:
+::
+$ pip install apoor
 
 
 Indices and tables
