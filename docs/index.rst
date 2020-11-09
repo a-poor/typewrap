@@ -31,8 +31,8 @@ A super tiny python package for function typechecking.
 * PyPi: https://pypi.org/project/typewrap
 
 
- Requirements
- -------------
+Requirements
+-------------
   * ``python>=3.6``
 
 
