@@ -26,9 +26,10 @@ Welcome to TypeWrap's documentation!
 
 A super tiny python package for function typechecking.
 
- ============================
- Requirements & Installation
- ============================
+* GitHub: https://github.com/a-poor/typewrap
+* ReadTheDocs: https://typewrap.readthedocs.io
+* PyPi: https://pypi.org/project/typewrap
+
 
  Requirements
  -------------

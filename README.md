@@ -12,7 +12,7 @@ _created by Austin Poor_
 Super tiny python package for function typechecking.
 
 * GitHub: https://github.com/a-poor/typewrap
-* ReadTheDocs:
+* ReadTheDocs: https://typewrap.readthedocs.io
 * PyPi: https://pypi.org/project/typewrap
 
 
