@@ -18,6 +18,9 @@ Welcome to TypeWrap's documentation!
   :target: https://pypi.org/project/typewrap
 .. image:: https://codecov.io/gh/a-poor/typewrap/branch/master/graph/badge.svg
   :target: https://codecov.io/gh/a-poor/typewrap
+.. image:: https://readthedocs.org/projects/typewrap/badge/?version=latest
+  :target: https://typewrap.readthedocs.io/en/latest/?badge=latest
+  :alt: Documentation Status
 
 *created by Austin Poor*
 
