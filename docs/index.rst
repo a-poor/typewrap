@@ -10,6 +10,33 @@ Welcome to TypeWrap's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+.. image:: https://travis-ci.com/a-poor/typewrap.svg?branch=master
+   :target: https://travis-ci.com/a-poor/typewrap
+.. image:: https://img.shields.io/pypi/v/typewrap
+   :target: https://pypi.org/project/typewrap
+.. image:: https://img.shields.io/pypi/pyversions/typewrap
+  :target: https://pypi.org/project/typewrap
+.. image:: https://codecov.io/gh/a-poor/typewrap/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/a-poor/typewrap
+
+*created by Austin Poor*
+
+A super tiny python package for function typechecking.
+
+ ============================
+ Requirements & Installation
+ ============================
+
+ Requirements
+ -------------
+  * ``python>=3.6``
+
+
+ Installation
+ -------------
+ Installing with ``pip``
+ ::
+     $ pip install apoor
 
 
 Indices and tables
