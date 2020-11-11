@@ -6,13 +6,13 @@
 import functools
 import inspect
 
-from typing import Callable, Any
+from typing import Callable
 
 
 __version__ = "0.2.6"
 
 
-def checkInputs(f: Callable[[Any],Any]) -> Callable[[Any],Any]:
+def checkInputs(f: Callable) -> Callable:
     """Function input type-checking decorator.
 
     Wraps a function with argument type annotations.
@@ -22,11 +22,11 @@ def checkInputs(f: Callable[[Any],Any]) -> Callable[[Any],Any]:
     :param f: Function with argument type hints to check
     :raises TypeCheckError: If `not isinstance(argValue,argType)`
 
-    Example::
+    Examples::
 
         >>> @checkInputs
-        >>> def add(a: int, b: int):
-               return a + b
+        >>> def add(a: int, b: int
+        ...     return a + b
         >>> add(1, 2)   # Works
         >>> add(1, 2.0) # Raises TypeCheckError
     """
@@ -45,7 +45,7 @@ def checkInputs(f: Callable[[Any],Any]) -> Callable[[Any],Any]:
         return f(*args,**kwargs)
     return inner
 
-def checkOutputs(f: Callable[[Any],Any]) -> Callable[[Any],Any]:
+def checkOutputs(f: Callable) -> Callable:
     """Function output type-checking decorator.
 
     Wraps a function with argument type annotations.
@@ -55,15 +55,16 @@ def checkOutputs(f: Callable[[Any],Any]) -> Callable[[Any],Any]:
     :param f: Function with return type hint to check
     :raises TypeCheckError: If `not isinstance(returnValue,returnType)`
 
-    Example::
+    Examples::
 
         >>> @checkOutputs
         >>> def add(a, b) -> int:
-                return a + b
+        ...     return a + b
         >>> add(1, 2)   # Works
+
         >>> @checkOutputs
         >>> def add(a, b) -> str:
-                return a + b
+        ...     return a + b
         >>> add(1, 2)   # Raises TypeCheckError
     """
     # Get the function signature

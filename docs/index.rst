@@ -41,8 +41,11 @@ Requirements
 
 Installation
 -------------
-Installing with ``pip``::
-  $ pip install apoor
+Installing with ``pip``:
+
+.. code-block:: console
+
+    $ pip install typewrap
 
 
 Usage
