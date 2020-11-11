@@ -1,15 +1,10 @@
-"""
-typewrap/__init__.py
-
-created by Austin Poor
-"""
+# typewrap.py
+# created by Austin Poor
 
 import functools
 import inspect
 
 from typing import Callable, Any
-
-from .exceptions import TypeCheckError
 
 
 __version__ = "0.2.4"
@@ -48,7 +43,7 @@ def checkInputs(f: Callable[[Any],Any]) -> Callable[[Any],Any]:
     return inner
 
 def checkOutputs(f: Callable[[Any],Any]) -> Callable[[Any],Any]:
-    """Function input type-checking decorator.
+    """Function output type-checking decorator.
 
     Wraps a function with argument type annotations.
     When function is called, checks output value
@@ -80,3 +75,8 @@ def checkOutputs(f: Callable[[Any],Any]) -> Callable[[Any],Any]:
                 raise TypeCheckError(f"Output type mismatch: `type({result!r}) != {return_type!r}`")
         return result
     return inner
+
+class TypeCheckError(TypeError):
+    """Subclass of `TypeError` for type checking
+    input or output exceptions."""
+    pass

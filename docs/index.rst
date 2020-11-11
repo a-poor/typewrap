@@ -7,8 +7,12 @@ Welcome to TypeWrap's documentation!
 ====================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
    :caption: Contents:
+
+   modules
+   typewrap
+
 
 *created by Austin Poor*
 
@@ -38,9 +42,15 @@ Requirements
 
 Installation
 -------------
-Installing with ``pip``:
-::
-$ pip install apoor
+Installing with ``pip``::
+  $ pip install apoor
+
+
+Usage
+-----
+
+.. automodule::typewrap
+  :members:
 
 
 Indices and tables
