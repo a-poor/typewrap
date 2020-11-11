@@ -21,7 +21,7 @@ project = 'TypeWrap'
 copyright = '2020, Austin Poor'
 author = 'Austin Poor'
 
-release = '0.2.6'
+release = '0.3.0'
 
 
 # -- General configuration ---------------------------------------------------

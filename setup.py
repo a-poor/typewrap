@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="typewrap",
-    version="0.2.6",
+    version="0.3.0",
     author="Austin Poor",
     author_email="austinpoor@gmail.com",
     description="A super small package for function input type checking",

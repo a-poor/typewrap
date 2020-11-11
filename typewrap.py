@@ -9,7 +9,7 @@ import inspect
 from typing import Callable
 
 
-__version__ = "0.2.6"
+__version__ = "0.3.0"
 
 
 def checkInputs(f: Callable) -> Callable:
