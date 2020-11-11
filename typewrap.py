@@ -1,3 +1,5 @@
+
+
 # typewrap.py
 # created by Austin Poor
 
@@ -20,12 +22,13 @@ def checkInputs(f: Callable[[Any],Any]) -> Callable[[Any],Any]:
     :param f: Function with argument type hints to check
     :raises TypeCheckError: If `not isinstance(argValue,argType)`
 
-    Example:
-    >>> @checkInputs
-    >>> def add(a: int, b: int):
-    ...    return a + b
-    >>> add(1, 2)   # Works
-    >>> add(1, 2.0) # Raises TypeCheckError
+    Example::
+
+        >>> @checkInputs
+        >>> def add(a: int, b: int):
+               return a + b
+        >>> add(1, 2)   # Works
+        >>> add(1, 2.0) # Raises TypeCheckError
     """
     # Get the function signature
     sig = inspect.signature(f)
@@ -52,15 +55,16 @@ def checkOutputs(f: Callable[[Any],Any]) -> Callable[[Any],Any]:
     :param f: Function with return type hint to check
     :raises TypeCheckError: If `not isinstance(returnValue,returnType)`
 
-    Example:
-    >>> @checkOutputs
-    >>> def add(a, b) -> int:
-    ...    return a + b
-    >>> add(1, 2)   # Works
-    >>> @checkOutputs
-    >>> def add(a, b) -> str:
-    ...    return a + b
-    >>> add(1, 2)   # Raises TypeCheckError
+    Example::
+
+        >>> @checkOutputs
+        >>> def add(a, b) -> int:
+                return a + b
+        >>> add(1, 2)   # Works
+        >>> @checkOutputs
+        >>> def add(a, b) -> str:
+                return a + b
+        >>> add(1, 2)   # Raises TypeCheckError
     """
     # Get the function signature
     sig = inspect.signature(f)

@@ -10,7 +10,6 @@ Welcome to TypeWrap's documentation!
    :maxdepth: 4
    :caption: Contents:
 
-   modules
    typewrap
 
 
@@ -49,8 +48,11 @@ Installing with ``pip``::
 Usage
 -----
 
-.. automodule::typewrap
-  :members:
+.. automodule:: typewrap
+   :noindex:
+   :members:
+   :undoc-members:
+   :show-inheritance:
 
 
 Indices and tables
