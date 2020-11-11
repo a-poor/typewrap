@@ -7,7 +7,7 @@ import inspect
 from typing import Callable, Any
 
 
-__version__ = "0.2.4"
+__version__ = "0.2.5"
 
 
 def checkInputs(f: Callable[[Any],Any]) -> Callable[[Any],Any]:
